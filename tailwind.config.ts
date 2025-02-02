@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#ddf",
+        background: "#ffffe0",
         foreground: "black",
       },
       fontFamily: {
