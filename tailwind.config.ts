@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#ffffe0",
-        foreground: "black",
+        background: "#eee",
+        foreground: "#e61",
       },
       fontFamily: {
         roboto:
