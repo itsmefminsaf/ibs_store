@@ -16,6 +16,9 @@ export default {
         roboto:
           "@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');",
       },
+      boxShadow: {
+        top: "0 0px 15px -5px rgba(0,0,0,0.1)",
+      },
     },
   },
   plugins: [],

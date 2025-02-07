@@ -1,13 +1,47 @@
-import logo from "@/assets/logo.png";
+import product from "@/assets/pr1.jpg";
+
+import ProductCard from "@/components/ProductCard";
 
 const page = () => {
+  const products: productType[] = [
+    {
+      id: 100,
+      image: product.src,
+      stockCount: 100,
+      title: "Stylish men footwear",
+    },
+    {
+      id: 20,
+      image: product.src,
+      stockCount: 100,
+      title: "Stylish men footwear",
+    },
+    {
+      id: 35,
+      image: product.src,
+      stockCount: 100,
+      title: "Stylish men footwear",
+    },
+    {
+      id: 10,
+      image: product.src,
+      stockCount: 100,
+      title: "Stylish men footwear",
+    },
+    {
+      id: 13,
+      image: product.src,
+      stockCount: 100,
+      title: "Stylish men footwear",
+    },
+  ];
+
   return (
-    <>
-      <div className="flex items-center justify-evenly p-5 shadow-neutral-500 shadow-md">
-        <img src={logo.src} alt="logo" className="max-h-20 max-w-20" />
-        <h1 className="font-extrabold text-3xl text-center">IYOOB BOOK SHOP</h1>
-      </div>
-    </>
+    <section className="grid sm:grid-cols-3 grid-cols-2 md:grid-cols-4 gap-3 p-2">
+      {products.map((product) => {
+        return <ProductCard key={product.id} product={product} />;
+      })}
+    </section>
   );
 };
 

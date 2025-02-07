@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .category{
+        @apply text-sm text-neutral-600 px-4 py-1 duration-500 inline rounded-3xl;
+    }
+    .active_category{
+        @apply  bg-neutral-600 text-background;
+    }
+}
