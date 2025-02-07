@@ -17,7 +17,7 @@ const Home = () => {
           Your One-Stop Destination for Everyday Essentials!. Founded in 2024,
           Iyoob Book Shop is more than just a bookstore we offer a diverse range
           of high-quality products, including stationery, plastic items, and
-          fashion accessories. Whether you're a student, professional, or just
+          fashion accessories. Whether you are a student, professional, or just
           looking for trendy essentials, we have something for everyone. Explore
           our collection and shop with ease. Quality, affordability, and
           customer satisfaction are our top priorities!

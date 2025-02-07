@@ -1,11 +1,7 @@
+import Image from "next/image";
 import React from "react";
 
-type FeatureProps = {
-  img: string;
-  title: string;
-  description: string;
-  dir?: "left" | "right";
-};
+import { FeatureProps } from "@/libs/type";
 
 const Feature = ({ img, title, description, dir = "left" }: FeatureProps) => {
   return (
@@ -14,7 +10,7 @@ const Feature = ({ img, title, description, dir = "left" }: FeatureProps) => {
         dir === "left" ? "flex-row" : "flex-row-reverse"
       }`}
     >
-      <img src={img} alt={title} className="h-14" />
+      <Image src={img} alt={title} className="h-14" />
       <div className={`${dir === "left" ? "text-right" : "text-left"}`}>
         <h3 className="text-xl">{title}</h3>
         <p className="opacity-75">{description}</p>

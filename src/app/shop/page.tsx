@@ -1,6 +1,7 @@
 import product from "@/assets/pr1.jpg";
 
 import ProductCard from "@/components/ProductCard";
+import { productType } from "@/libs/type";
 
 const page = () => {
   const products: productType[] = [
