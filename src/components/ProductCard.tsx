@@ -5,8 +5,14 @@ import { productType } from "@/libs/type";
 
 const ProductCard = ({ product }: { product: productType }) => {
   return (
-    <div className="p-4 border shadow-top hover:scale-105 duration-500 shadow-slate-500 rounded-xl">
-      <Image src={product.image} alt={product.title} loading="lazy" />
+    <div className="p-4 border shadow-top duration-500 shadow-slate-500 rounded-xl">
+      <Image
+        src={product.image}
+        alt={product.title}
+        loading="lazy"
+        width={512}
+        height={512}
+      />
       <div className="grid grid-rows-[auto_auto] gap-1 grid-cols-[2fr_1fr]">
         <h2 className="col-span-2 font-bold p-1">{product.title}</h2>
         <h4
@@ -19,7 +25,13 @@ const ProductCard = ({ product }: { product: productType }) => {
             : `${product.stockCount} Available`}
         </h4>
         <button className="w-fit h-fit place-self-end bg-foreground text-background py-1 px-3 rounded-lg">
-          <Image src={eye.src} alt="view" color="while" />
+          <Image
+            src={eye.src}
+            alt="view"
+            color="while"
+            width={128}
+            height={128}
+          />
         </button>
       </div>
     </div>

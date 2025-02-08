@@ -10,7 +10,7 @@ const Feature = ({ img, title, description, dir = "left" }: FeatureProps) => {
         dir === "left" ? "flex-row" : "flex-row-reverse"
       }`}
     >
-      <Image src={img} alt={title} className="h-14" />
+      <Image src={img} alt={title} className="h-14" width={128} height={64} />
       <div className={`${dir === "left" ? "text-right" : "text-left"}`}>
         <h3 className="text-xl">{title}</h3>
         <p className="opacity-75">{description}</p>

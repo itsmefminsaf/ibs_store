@@ -24,6 +24,8 @@ const Carousel = () => {
         src={images[currentImageIndex].src}
         className="h-full rounded-lg"
         alt="iyoob book shop images"
+        width={512}
+        height={512}
       />
     </section>
   );
