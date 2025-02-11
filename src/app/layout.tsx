@@ -1,14 +1,10 @@
-import { footerItems } from "@/libs/variables";
 import "./globals.css";
 import Loading from "./loading";
+import { footerItems, metaData } from "@/libs/variables";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
-export const metadata: Metadata = {
-  title: "IBS | Iyoob Book Shop | Buy Stationeries and accessories online",
-  description:
-    "Iyoob Book Shop is the right choice for Kalpitiya people looking for stationeries and accessories. We provide a wide range of products at affordable prices.",
-};
+export const metadata: Metadata = metaData;
 
 export default function RootLayout({
   children,
@@ -52,8 +48,15 @@ export default function RootLayout({
               </div>
             </div>
             <h5 className="text-center font-bold">
-              <a href={footerItems.contactDeveloper} target="_blank">
+              <a href="https://insafportfolio.web.app" target="_blank">
                 Developer info
+              </a>
+              <br />
+              <a
+                href="https://github.com/itsmefminsaf/ibs_store"
+                target="_blank"
+              >
+                Source Code
               </a>
             </h5>
           </footer>
