@@ -8,16 +8,26 @@ const images = ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const decreaseCurrentIndex = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(images.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const increaseCurrentIndex = () => {
+    if (currentIndex === images.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
   return (
     <section className="relative p-3 w-screen aspect-video">
-      <button
-        className="carousel-arrow left-5"
-        onClick={() => {
-          currentIndex === 0
-            ? setCurrentIndex(images.length - 1)
-            : setCurrentIndex(currentIndex - 1);
-        }}
-      >
+      <button className="carousel-arrow left-5" onClick={decreaseCurrentIndex}>
         <ArrowLeftIcon />
       </button>
       <Image
@@ -27,14 +37,7 @@ const Carousel = () => {
         alt="Iyoob Book Shop Images"
         className="rounded-lg"
       />
-      <button
-        className="carousel-arrow right-5"
-        onClick={() => {
-          currentIndex === images.length - 1
-            ? setCurrentIndex(0)
-            : setCurrentIndex(currentIndex + 1);
-        }}
-      >
+      <button className="carousel-arrow right-5" onClick={increaseCurrentIndex}>
         <ArrowRightIcon />
       </button>
       <div className="flex items-center justify-center gap-2 absolute bottom-5 w-fit p-2 bg-black/50 backdrop-blur-lg rounded-full left-1/2 -translate-x-1/2">
