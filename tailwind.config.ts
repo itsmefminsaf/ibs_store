@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,22 @@ export default {
       },
       boxShadow: {
         top: "0 0px 15px -5px rgba(0,0,0,0.1)",
+      },
+      animation: {
+        work: "work .8s infinite ease",
+      },
+      keyframes: {
+        work: {
+          "0%": {
+            rotate: "30deg",
+          },
+          "50%": {
+            rotate: "0deg",
+          },
+          "100%": {
+            rotate: "30deg",
+          },
+        },
       },
     },
   },

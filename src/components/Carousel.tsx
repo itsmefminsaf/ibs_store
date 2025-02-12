@@ -41,6 +41,7 @@ const Carousel = () => {
         {images.map((image, index) => {
           return (
             <button
+              key={index}
               onClick={() => {
                 setCurrentIndex(index);
               }}
