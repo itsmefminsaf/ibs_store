@@ -2,7 +2,7 @@ import { shopName } from "@/libs/variables";
 import NavOpenClose from "@/components/NavOpenClose";
 import Image from "next/image";
 import React from "react";
-import AdminDashboard from "@/components/AdminDashboard";
+import AdminDashboardProtection from "@/components/AdminDashboardProtection";
 
 const page = () => {
   return (
@@ -23,7 +23,7 @@ const page = () => {
         </h3>
         <NavOpenClose />
       </header>
-      <AdminDashboard />
+      <AdminDashboardProtection />
     </>
   );
 };
