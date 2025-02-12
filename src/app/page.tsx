@@ -9,6 +9,7 @@ import Feature from "@/components/Feature";
 import CTA from "@/components/CTA";
 
 import Image from "next/image";
+import Carousel from "@/components/Carousel";
 
 const Home = () => {
   return (
@@ -20,15 +21,7 @@ const Home = () => {
         <h1 className="text-2xl font-extrabold uppercase">{shopName}</h1>
         <h4>{shopAddress}</h4>
       </header>
-      <section className="relative p-3 w-screen aspect-video">
-        <Image
-          src={"/carousel/1.jpg"}
-          width={512}
-          height={512}
-          alt="Iyoob Book Shop"
-          className="rounded-lg"
-        />
-      </section>
+      <Carousel />
       <section className="text-[.8rem] p-4 text-justify">
         <h3 className="font-bold text-xl text-center">Welcome to {shopName}</h3>
         <p>{shopDescription}</p>
