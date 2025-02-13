@@ -17,8 +17,8 @@ const NavOpenClose = () => {
       </button>
       <nav
         className={`${
-          isOpen ? "translate-x-0" : "translate-x-48"
-        } absolute bg-foreground text-background py-5 px-3 right-2 rounded-lg top-20 duration-500`}
+          isOpen ? "scale-y-100" : "scale-y-0"
+        } absolute bg-foreground text-background py-5 px-3 right-2 rounded-lg top-20 duration-75 origin-top`}
       >
         <ul className="text-xl flex flex-col gap-5">
           <a href="/admin/dashboard?tab=acc" className="nav-item">
