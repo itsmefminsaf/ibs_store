@@ -1,31 +1,44 @@
-import { shopName } from "@/libs/variables";
-import NavOpenClose from "@/components/NavOpenClose";
-import Image from "next/image";
-import React from "react";
-import AdminDashboardProtection from "@/components/AdminDashboardProtection";
+"use client";
+
+import AdminDashboard from "@/components/AdminDashboard";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const page = () => {
-  return (
-    <>
-      <header className="grid grid-cols-[auto_auto_auto] grid-rows-[auto_auto] p-3">
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={512}
-          height={512}
-          className="w-20 h-20 col-start-1 row-start-1 col-end-2 row-end-3"
-        />
-        <h1 className="col-start-2 row-start-1 col-end-3 row-end-2 text-3xl font-bold">
-          Dashboard
-        </h1>
-        <h3 className="col-start-2 row-start-2 col-end-3 row-end-3 text-xl">
-          {shopName}
-        </h3>
-        <NavOpenClose />
-      </header>
-      <AdminDashboardProtection />
-    </>
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const adminName = localStorage.getItem("adminName");
+    const pwd = localStorage.getItem("pwd");
+
+    if (!pwd || !adminName) {
+      setIsAuthenticated(false);
+      setLoading(false);
+    }
+
+    fetch("/api/check-credentials", {
+      method: "POST",
+      body: JSON.stringify({ adminName, pwd }),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.authenticated) {
+          setIsAuthenticated(true);
+        }
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <h1>Checking credentials...</h1>;
+  }
+
+  if (!isAuthenticated) {
+    redirect("/admin/login");
+  }
+
+  return <AdminDashboard />;
 };
 
 export default page;
