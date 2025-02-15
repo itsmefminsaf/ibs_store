@@ -10,4 +10,6 @@
     .carousel-arrow {@apply p-3 rounded-full bg-black/50 backdrop-blur-lg text-background absolute top-1/2 -translate-y-1/2}
 
     .admin-form-input {@apply p-3 rounded-lg outline-none border-none}
+
+    .add-product-input {@apply p-2 rounded-lg h-max border-none outline-none}
 }
