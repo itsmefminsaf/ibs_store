@@ -6,10 +6,11 @@ export type featureProp = {
 };
 
 export type productType = {
-  id: number;
+  _id: number;
   imageURL: string;
   title: string;
   description: string;
-  count: number;
+  quantity: number;
+  sells: number;
   price: number;
 };

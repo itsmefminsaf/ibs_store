@@ -1,6 +1,6 @@
 "use client";
 
-import { Upload } from "lucide-react";
+import { ArrowLeftIcon, Upload } from "lucide-react";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 
@@ -40,9 +40,18 @@ const AddProductPage = () => {
 
   return (
     <>
-      <h1 className="text-center font-extrabold text-3xl pt-5">
-        Add new Product
-      </h1>
+      <header className="flex items-center justify-between p-3">
+        <button
+          onClick={() => {
+            history.back();
+          }}
+          className="flex flex-col items-center justify-center bg-foreground/20 rounded-xl p-2"
+        >
+          <ArrowLeftIcon />
+          <h4>Products</h4>
+        </button>
+        <h1 className="font-extrabold text-3xl">Add new Product</h1>
+      </header>
       <form
         className="grid grid-cols-2 grid-rows-[auto_auto_auto_auto] gap-2 p-2 mt-10"
         onSubmit={handleSubmit}

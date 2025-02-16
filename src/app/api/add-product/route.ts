@@ -12,6 +12,7 @@ export const POST = async (req: NextRequest) => {
     const description = formData.get("description") as string;
     const quantity = formData.get("quantity") as string;
     const price = formData.get("price") as string;
+    const sells = 0;
 
     const imageBuffer = Buffer.from(await image.arrayBuffer());
 
@@ -24,6 +25,7 @@ export const POST = async (req: NextRequest) => {
       quantity,
       price,
       imageURL,
+      sells,
     });
 
     await newProduct.save();
