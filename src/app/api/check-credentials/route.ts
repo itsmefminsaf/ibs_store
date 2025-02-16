@@ -4,10 +4,7 @@ export const POST = async (req: NextRequest) => {
   const { adminName, pwd } = await req.json();
 
   const realAdminName = process.env.ADMIN_NAME;
-  console.log(realAdminName);
-
   const realPWD = process.env.PASSWORD;
-  console.log(realPWD);
 
   if (adminName === realAdminName && pwd === realPWD) {
     return NextResponse.json({ authenticated: true, adminName, pwd });

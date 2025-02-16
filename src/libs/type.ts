@@ -7,7 +7,7 @@ export type featureProp = {
 
 export type productType = {
   id: number;
-  image: string;
+  imageURL: string;
   title: string;
   description: string;
   count: number;
