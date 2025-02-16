@@ -28,19 +28,22 @@ const ManageProducts = () => {
         <Plus className="size-24" />
         <h3 className="text-center">Add new Product</h3>
       </a>
-      {products?.map(({ count, description, id, imageURL, price, title }) => {
-        return (
-          <ProductCard
-            key={id}
-            id={id}
-            count={count}
-            description={description}
-            imageURL={imageURL}
-            price={price}
-            title={title}
-          />
-        );
-      })}
+      {products?.map(
+        ({ quantity, description, sells, _id, imageURL, price, title }) => {
+          return (
+            <ProductCard
+              key={_id}
+              _id={_id}
+              quantity={quantity}
+              description={description}
+              imageURL={imageURL}
+              price={price}
+              sells={sells}
+              title={title}
+            />
+          );
+        }
+      )}
     </section>
   );
 };
