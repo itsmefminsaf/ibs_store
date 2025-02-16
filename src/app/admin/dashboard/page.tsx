@@ -4,7 +4,7 @@ import AdminDashboard from "@/components/AdminDashboard";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const AdminDashboardPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -41,4 +41,4 @@ const page = () => {
   return <AdminDashboard />;
 };
 
-export default page;
+export default AdminDashboardPage;

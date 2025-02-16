@@ -4,3 +4,12 @@ export type featureProp = {
   description: string;
   dir?: "left" | "right";
 };
+
+export type productType = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  count: number;
+  price: number;
+};

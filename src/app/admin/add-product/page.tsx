@@ -4,7 +4,7 @@ import { Upload } from "lucide-react";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
 
-const page = () => {
+const AddProductPage = () => {
   const [image, setImage] = useState<File>();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -126,4 +126,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AddProductPage;

@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import { FormEvent, useState } from "react";
 
-const page = () => {
+const LoginPage = () => {
   const [adminName, setAdminName] = useState("");
   const [pwd, setPwd] = useState("");
   const [invalid, setInValid] = useState(false);
@@ -74,4 +74,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default LoginPage;
